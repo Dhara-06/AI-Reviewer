@@ -1,0 +1,30 @@
+{
+  "name": "ai-review-automation-system",
+  "version": "1.0.0",
+  "description": "AI-Powered Intern Task Allocation, Voice Review & Feedback Automation System",
+  "scripts": {
+    "install:server": "npm --prefix server install",
+    "install:frontend": "npm --prefix frontend install",
+    "install:all": "npm install && npm run install:server && npm run install:frontend",
+    "start": "node server/src/server.js",
+    "start:backend": "node server/src/server.js",
+    "dev:backend": "npm --prefix server run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "seed": "node server/src/utils/seed.js",
+    "test": "node server/tests/assistant.test.js",
+    "dev": "concurrently -n \"SERVER,FRONTEND\" -c \"blue,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "intern-management",
+    "voice-assistant",
+    "ai-feedback",
+    "github-review",
+    "gemini",
+    "google-calendar"
+  ],
+  "author": "AI Review Automation System",
+  "license": "MIT"
+}
